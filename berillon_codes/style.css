@@ -1,0 +1,159 @@
+/* Splash page background styling */
+.splash-page {
+    height: 100vh; /* Full viewport height */
+    background-image: url('../berillon_assets/SplashPage.gif'); /* Path to the background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(192, 174, 33, 0.829); /* Text color */
+    text-align: center;
+}
+ .splash-button {
+    display: inline-block; /* Make the link look like a button */
+    padding: 20px 40px; /* Add some padding */
+    background-image: linear-gradient(to top, #cca300, #fff0b3); /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 25px; /* Rounded corners */
+    border: 0.2em solid rgba(0, 0, 0, 0.889);
+    font-size: 20px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    
+    position: absolute; /* Position the button absolutely */
+    left: 50%; /* Move it to the center horizontally */
+    bottom: 20px; /* Set distance from the bottom of the page */
+    transform: translateX(-50%); /* Adjust to center it perfectly */
+    transition: all 0.5s;
+ }
+ .splash-button:hover,
+ .splash-button:focus-visible {
+    background: #a0820a;
+}
+
+
+/* Adjust text size on smaller screens */
+@media (max-width: 600px) {
+    .splash-page h1 {
+        font-size: 2em;
+    }
+
+    .splash-page p {
+        font-size: 1.2em;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: space-around;
+}
+
+
+.box {
+    flex: 1 1 200px; 
+    margin: 10px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+@media (max-width: 600px) {
+    .box {
+        flex: 1 1 100%; 
+    }
+}
+
+
+@media (min-width: 768px) {
+    
+}
+
+@media (max-width: 767px) {
+    
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+p {
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 14px; 
+    }
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    position: relative; /* Allows for positioning of the sticky nav */
+    z-index: 1000; /* Keeps header above other content */
+}
+nav {
+    background-image: url('../berillon_assets/navbar.png'); /* Adjust the path as necessary */
+    background-size: cover; /* This makes the image cover the entire nav area */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 60px; /* Set a height for your nav bar */
+    display: flex; /* Optional: This allows you to align items within the nav */
+    align-items: center; /* Centers items vertically */
+    padding: 0 20px; /* Adds some padding on the left and right */
+}
+
+.nav-bar {
+    position: relative; /* Allows for toggling sticky class */
+    transition: top 3s; /* Smooth transition */
+}
+
+.nav-bar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../berillon_assets/navbar.png'); /* Optional: change background when sticky */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for effect */
+}
+
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: right;
+    font-size: 150%;
+}
+
+.nav-bar li {
+    margin: 0 15px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #af8429ee;
+}
+
+/* Additional styles for content */
+.content {
+    margin-top: 80px; /* Adjust based on header height */
+}
+
